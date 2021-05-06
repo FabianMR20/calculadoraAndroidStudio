@@ -2,14 +2,12 @@ package com.neptunosl.calculadora;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.io.CharArrayWriter;
 import java.io.PrintWriter;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,17 +18,18 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_resta;
     private Button btn_division;
     private Button btn_multiplicacion;
-    private Button botonPunto;
-    private Button boton0;
-    private Button boton1;
-    private Button boton2;
-    private Button boton3;
-    private Button boton4;
-    private Button boton5;
-    private Button boton6;
-    private Button boton7;
-    private Button boton8;
-    private Button boton9;
+    private Button btnPunto;
+    private Button btnIgual;
+    private Button btn0;
+    private Button btn1;
+    private Button btn2;
+    private Button btn3;
+    private Button btn4;
+    private Button btn5;
+    private Button btn6;
+    private Button btn7;
+    private Button btn8;
+    private Button btn9;
 
     private TextView text_respuesta;
 
@@ -38,44 +37,44 @@ public class MainActivity extends AppCompatActivity {
     private EditText edit_numero_dos;
 
     public void boton0(){
-        operando.append("0");
+        edit_numero_uno.append("0");
     }
     public void boton1(){
-        operando.append("1");
+        edit_numero_uno.setText("1");
     }
     public void boton2(){
-        operando.append("2");
+        edit_numero_uno.append("2");
     }
     public void boton3(){
-        operando.append("3");
+        edit_numero_uno.append("3");
     }
     public void boton4(){
-        operando.append("4");
+        edit_numero_uno.append("4");
     }
     public void boton5(){
-        operando.append("5");
+        edit_numero_uno.append("5");
     }
     public void boton6(){
-        operando.append("6");
+        edit_numero_uno.append("6");
     }
     public void boton7(){
-        operando.append("7");
+        edit_numero_uno.append("7");
     }
     public void boton8(){
-        operando.append("8");
+        edit_numero_uno.append("8");
     }
     public void boton9(){
-        operando.append("9");
+        edit_numero_uno.append("9");
     }
     public void botonPunto(){
-        operando.append(".");
+        edit_numero_uno.append(".");
     }
-    public void botonEsc(){
+/*    public void botonIgual(){
         finish();
     }
     public void finish(){
         Intent salida=new Intent( Intent.ACTION_MAIN);
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_division = findViewById(R.id.button9);
+        btn_division = findViewById(R.id.button_division);
         btn_division.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
